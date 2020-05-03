@@ -213,9 +213,9 @@ bar {
 
 bindsym $mod+shift+x exec "i3lock --color 313131"
 
-bindsym --release Print exec "maim -u -s -n -l -b 3 | xclip -selection clipboard -t image/png"
+bindsym Print exec "maim -u -s -n -l -b 3 --color 255,255,255,0.25 | xclip -selection clipboard -t image/png"
 
-exec_always feh --bg-fill /home/ordis/Pictures/adrihani-rashid-fTkNnftidCU-unsplash.jpg
+exec_always feh --bg-fill /home/ordis/Pictures/wallpapers/adrihani-rashid-fTkNnftidCU-unsplash.jpg
 
 # Default applications
 exec firefox
