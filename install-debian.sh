@@ -9,7 +9,6 @@ PACKAGES=(
     "zsh"
     "davfs2"
     "keepassxc"
-    "dotnet-sdk-3.1"
     "software-properties-common"
     "gnupg-agent"    
     "ca-certificates"
@@ -26,10 +25,6 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 
 # KeepassXC
 sudo add-apt-repository ppa:phoerious/keepassxc
-
-# Dotnet
-wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
 
 # Install everything
 sudo apt-get update
