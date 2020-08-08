@@ -2,8 +2,7 @@
 
 if command -v polybar > /dev/null 2&>1
 then
-    if ! pgrep polybar > /dev/null 2&>1
-    then
-        polybar main -q &
-    fi
+    for m in $(polybar --list-monitors | cut -d":" -f1); do
+        MONITOR=$m polybar -q --reload main &
+    done
 fi

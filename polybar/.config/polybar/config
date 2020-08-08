@@ -33,7 +33,7 @@ underline-2 = #022887
 icons = ${self.foreground}
 
 [bar/main]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:}
 width = 100%
 height = 31
 offset-x = 0
@@ -211,7 +211,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.icons}
 format-underline = ${colors.underline-1}
 label = %percentage:2%%
