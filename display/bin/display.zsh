@@ -16,10 +16,13 @@ if isScreenConnected "$MAIN_MONITOR"
 then
     if isScreenConnected "$SEC_MONITOR"
     then
-        $XRANDR --output "$LAPTOP_SCREEN" --primary --output "$MAIN_MONITOR" --same-as "$LAPTOP_SCREEN" --output "$SEC_MONITOR" --left-of "$MAIN_MONITOR"
+        $XRANDR --output "$LAPTOP_SCREEN" --right-of "$SEC_MONITOR" --output "$MAIN_MONITOR" --primary --same-as "$LAPTOP_SCREEN" --output "$SEC_MONITOR"
     else
-        $XRANDR --output "$LAPTOP_SCREEN" --primary --output "$MAIN_MONITOR" --same-as "$LAPTOP_SCREEN"
+        $XRANDR --output "$LAPTOP_SCREEN" --output "$MAIN_MONITOR" --primary --same-as "$LAPTOP_SCREEN"
     fi
 else
     $XRANDR --output "$LAPTOP_SCREEN" --primary
 fi
+
+# Start Polybar
+~/.config/polybar/launch.sh
